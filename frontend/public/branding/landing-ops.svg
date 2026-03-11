@@ -1,0 +1,73 @@
+<svg width="1320" height="560" viewBox="0 0 1320 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="opsBg" x1="0" y1="0" x2="1320" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111D53"/>
+      <stop offset="1" stop-color="#0A143B"/>
+    </linearGradient>
+    <linearGradient id="opsPanel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#1F3C9B"/>
+      <stop offset="1" stop-color="#0A173F"/>
+    </linearGradient>
+    <linearGradient id="opsLine" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#D7E5FF"/>
+      <stop offset="1" stop-color="#8FB0F3" stop-opacity=".2"/>
+    </linearGradient>
+    <filter id="opsShadow" x="-20%" y="-20%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#00081C" flood-opacity=".62"/>
+    </filter>
+    <filter id="opsBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="640" cy="528" rx="420" ry="76" fill="#6178F5" fill-opacity=".42" filter="url(#opsBlur)"/>
+
+  <g transform="translate(140 48)" filter="url(#opsShadow)">
+    <rect width="760" height="430" rx="24" fill="url(#opsPanel)" stroke="#A9C1FF" stroke-opacity=".52" stroke-width="2"/>
+    <rect x="26" y="22" width="708" height="46" rx="14" fill="#0E1B4D" stroke="#6E95F5" stroke-opacity=".5"/>
+    <text x="52" y="52" fill="#DCE8FF" font-size="20" font-family="Arial" font-weight="700">WEBSYS</text>
+    <rect x="30" y="84" width="700" height="166" rx="16" fill="#F6FAFF" stroke="#C0D2FF"/>
+    <rect x="52" y="108" width="238" height="15" rx="7.5" fill="#B0C4EB"/>
+    <rect x="52" y="136" width="256" height="15" rx="7.5" fill="#B0C4EB"/>
+    <rect x="52" y="164" width="182" height="15" rx="7.5" fill="#B0C4EB"/>
+    <rect x="332" y="108" width="370" height="120" rx="12" fill="#EAF3FF" stroke="#BED2FF"/>
+    <path d="M346 198C373 191 396 158 430 158C454 158 476 174 500 174C528 174 549 142 579 142C606 142 628 165 651 165C669 165 684 150 702 132" stroke="#48A9FF" stroke-width="5" stroke-linecap="round"/>
+    <g stroke="#B8CDF5" stroke-opacity=".45">
+      <line x1="346" y1="178" x2="696" y2="178"/>
+      <line x1="346" y1="154" x2="696" y2="154"/>
+    </g>
+
+    <rect x="30" y="266" width="700" height="138" rx="16" fill="#F4F9FF" stroke="#BCD1FF"/>
+    <rect x="52" y="292" width="302" height="12" rx="6" fill="url(#opsLine)"/>
+    <rect x="52" y="315" width="248" height="12" rx="6" fill="url(#opsLine)"/>
+    <rect x="52" y="338" width="216" height="12" rx="6" fill="url(#opsLine)"/>
+    <rect x="380" y="292" width="300" height="12" rx="6" fill="url(#opsLine)"/>
+    <rect x="380" y="315" width="248" height="12" rx="6" fill="url(#opsLine)"/>
+    <rect x="380" y="338" width="203" height="12" rx="6" fill="url(#opsLine)"/>
+    <rect x="620" y="362" width="82" height="18" rx="9" fill="#4D72E7"/>
+  </g>
+
+  <g transform="translate(806 126)" filter="url(#opsShadow)">
+    <rect width="430" height="278" rx="20" fill="url(#opsBg)" stroke="#9AB6FF" stroke-opacity=".48"/>
+    <rect x="18" y="18" width="394" height="242" rx="16" fill="#11205A" stroke="#6D95F3" stroke-opacity=".5"/>
+    <rect x="34" y="40" width="360" height="14" rx="7" fill="url(#opsLine)"/>
+    <rect x="34" y="66" width="326" height="14" rx="7" fill="url(#opsLine)"/>
+    <rect x="34" y="92" width="286" height="14" rx="7" fill="url(#opsLine)"/>
+    <rect x="34" y="130" width="360" height="96" rx="12" fill="#0C1A4B" stroke="#7B9EEE" stroke-opacity=".45"/>
+    <rect x="48" y="146" width="145" height="10" rx="5" fill="url(#opsLine)"/>
+    <rect x="48" y="166" width="201" height="10" rx="5" fill="url(#opsLine)"/>
+    <rect x="48" y="186" width="161" height="10" rx="5" fill="url(#opsLine)"/>
+    <rect x="258" y="146" width="122" height="10" rx="5" fill="url(#opsLine)"/>
+    <rect x="258" y="166" width="98" height="10" rx="5" fill="url(#opsLine)"/>
+    <rect x="258" y="186" width="132" height="10" rx="5" fill="url(#opsLine)"/>
+  </g>
+
+  <g transform="translate(50 306)" filter="url(#opsShadow)">
+    <rect width="174" height="210" rx="20" fill="url(#opsPanel)" stroke="#9CB9FF" stroke-opacity=".55"/>
+    <rect x="22" y="24" width="130" height="14" rx="7" fill="#D0DEFF" fill-opacity=".55"/>
+    <rect x="22" y="56" width="130" height="14" rx="7" fill="url(#opsLine)"/>
+    <rect x="22" y="80" width="112" height="14" rx="7" fill="url(#opsLine)"/>
+    <rect x="22" y="104" width="96" height="14" rx="7" fill="url(#opsLine)"/>
+    <rect x="22" y="138" width="88" height="14" rx="7" fill="#5786FF"/>
+  </g>
+</svg>

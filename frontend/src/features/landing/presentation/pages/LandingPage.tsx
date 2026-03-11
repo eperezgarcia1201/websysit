@@ -3,22 +3,22 @@ import "../styles/landing.css";
 
 const industries = [
   {
-    icon: "▣",
+    icon: "◼",
     title: "Retail",
     text: "POS, inventory, and sales analytics"
   },
   {
-    icon: "◉",
+    icon: "●",
     title: "SaaS",
     text: "Subscriptions, customer insights, billing"
   },
   {
-    icon: "⌂",
+    icon: "▣",
     title: "Services",
     text: "Bookings, scheduling, and invoicing"
   },
   {
-    icon: "♡",
+    icon: "♥",
     title: "Healthcare",
     text: "Patient management and e-payments"
   }
@@ -33,7 +33,7 @@ const operationsHighlights = [
 
 const trustedBrands = ["PizzaHaus", "PeakTech", "MetroFit", "Swiftly", "BELL ASPA", "CraftRise"];
 
-const footerGroups = [
+const footerColumns = [
   {
     title: "Platform",
     links: ["POS", "Automation", "Payments"]
@@ -85,7 +85,7 @@ export default function LandingPage() {
                 <p className="ws-hero-copy">
                   Powerful, integrated platform providing analytics, automation, and payments to scale any business.
                 </p>
-                <div className="d-flex flex-wrap gap-2">
+                <div className="d-flex flex-wrap gap-2 ws-hero-actions">
                   <Link to="/login" className="btn btn-lg ws-primary-btn">
                     Explore Platform
                   </Link>
@@ -93,38 +93,8 @@ export default function LandingPage() {
               </div>
 
               <div className="col-lg-7">
-                <div className="ws-hero-visual" aria-hidden="true">
-                  <div className="ws-hero-glow" />
-                  <div className="ws-screen ws-screen-back" />
-                  <div className="ws-screen ws-screen-main">
-                    <div className="ws-screen-head">
-                      <span>WEBSYS</span>
-                      <strong>$28,500</strong>
-                    </div>
-                    <div className="ws-screen-chart" />
-                    <div className="ws-screen-table">
-                      <span />
-                      <span />
-                      <span />
-                      <span />
-                    </div>
-                  </div>
-                  <div className="ws-screen ws-screen-front">
-                    <div className="ws-mini-row" />
-                    <div className="ws-mini-row" />
-                    <div className="ws-mini-row" />
-                    <div className="ws-mini-pill" />
-                  </div>
-                  <div className="ws-floating ws-floating-left">
-                    <span />
-                    <span />
-                    <span />
-                  </div>
-                  <div className="ws-floating ws-floating-right">
-                    <span />
-                    <span />
-                    <span />
-                  </div>
+                <div className="ws-hero-visual-wrap">
+                  <img src="/branding/landing-hero.svg" alt="" className="ws-hero-visual" aria-hidden="true" />
                 </div>
               </div>
             </div>
@@ -133,13 +103,16 @@ export default function LandingPage() {
 
         <section id="solutions" className="ws-section">
           <div className="container-xl">
-            <h2 className="ws-section-title">A Scalable Platform for Every Industry</h2>
+            <h2 className="ws-section-title ws-line-title">A Scalable Platform for Every Industry</h2>
             <div className="row g-3 mt-1">
               {industries.map((industry) => (
                 <div className="col-md-6 col-xl-3" key={industry.title}>
                   <article className="ws-industry-card">
-                    <div className="ws-industry-icon">{industry.icon}</div>
-                    <h3>{industry.title}</h3>
+                    <div className="ws-industry-top">
+                      <span className="ws-industry-icon">{industry.icon}</span>
+                      <h3>{industry.title}</h3>
+                    </div>
+                    <div className="ws-industry-divider" />
                     <p>{industry.text}</p>
                   </article>
                 </div>
@@ -150,28 +123,15 @@ export default function LandingPage() {
 
         <section id="platform" className="ws-section">
           <div className="container-xl">
-            <h2 className="ws-section-title">Built to Power Your Entire Operation</h2>
+            <h2 className="ws-section-title ws-line-title">Built to Power Your Entire Operation</h2>
             <div className="ws-highlight-row">
               {operationsHighlights.map((item) => (
                 <span key={item}>✓ {item}</span>
               ))}
             </div>
 
-            <div className="ws-ops-frame">
-              <div className="ws-ops-main">
-                <div className="ws-ops-head">WEBSYS</div>
-                <div className="ws-ops-chart" />
-                <div className="ws-ops-metrics">
-                  <span />
-                  <span />
-                  <span />
-                </div>
-              </div>
-              <div className="ws-ops-panel">
-                <div className="ws-ops-panel-row" />
-                <div className="ws-ops-panel-row" />
-                <div className="ws-ops-panel-row" />
-              </div>
+            <div className="ws-ops-wrap">
+              <img src="/branding/landing-ops.svg" alt="" className="ws-ops-visual" aria-hidden="true" />
             </div>
 
             <p className="ws-trust-copy">Trusted by thousands of growing businesses across the United States</p>
@@ -187,7 +147,7 @@ export default function LandingPage() {
       <footer className="ws-footer" id="resources">
         <div className="container-xl">
           <div className="row g-4 align-items-start">
-            {footerGroups.map((group) => (
+            {footerColumns.map((group) => (
               <div className="col-6 col-md-3" key={group.title}>
                 <h4>{group.title}</h4>
                 <ul>
@@ -201,16 +161,16 @@ export default function LandingPage() {
             ))}
             <div className="col-12 col-md-3 ms-md-auto">
               <div className="ws-socials" id="pricing">
-                <a href="#" aria-label="LinkedIn">
+                <a href="#" aria-label="LinkedIn" onClick={(event) => event.preventDefault()}>
                   in
                 </a>
-                <a href="#" aria-label="X">
-                  x
+                <a href="#" aria-label="Twitter" onClick={(event) => event.preventDefault()}>
+                  t
                 </a>
-                <a href="#" aria-label="YouTube">
-                  ▶
+                <a href="#" aria-label="YouTube" onClick={(event) => event.preventDefault()}>
+                  y
                 </a>
-                <a href="#" aria-label="Facebook">
+                <a href="#" aria-label="Facebook" onClick={(event) => event.preventDefault()}>
                   f
                 </a>
               </div>
