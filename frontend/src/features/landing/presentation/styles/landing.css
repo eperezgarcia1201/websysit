@@ -17,7 +17,7 @@
     radial-gradient(circle at 68% 4%, rgba(73, 87, 246, 0.26), transparent 34%),
     radial-gradient(circle at 21% 21%, rgba(33, 85, 194, 0.22), transparent 40%),
     linear-gradient(180deg, var(--ws-bg-top) 0%, var(--ws-bg-mid) 44%, var(--ws-bg-bot) 100%);
-  padding: 0 0 2.5rem;
+  padding: 0;
 }
 
 .ws-mockup-main {
@@ -218,10 +218,6 @@
 }
 
 @media (max-width: 991.98px) {
-  .ws-mockup-shell {
-    padding-bottom: 1.4rem;
-  }
-
   .ws-hotspot {
     min-height: 30px;
   }
