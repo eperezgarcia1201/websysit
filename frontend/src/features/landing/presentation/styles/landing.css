@@ -65,6 +65,10 @@
   color: #fff;
 }
 
+.ws-inline-icon {
+  margin-right: 0.45rem;
+}
+
 .ws-nav-links {
   display: flex;
   gap: 3rem;
@@ -251,6 +255,12 @@
   filter: brightness(1.2) saturate(1.2);
 }
 
+.ws-industry-icon .svg-inline--fa {
+  width: 0.92rem;
+  height: 0.92rem;
+  color: #9fd0ff;
+}
+
 .ws-industry-card h3 {
   margin: 0;
   font-size: 2rem;
@@ -282,7 +292,14 @@
 }
 
 .ws-highlight-row span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.48rem;
   white-space: nowrap;
+}
+
+.ws-highlight-icon {
+  color: var(--ws-accent);
 }
 
 .ws-ops-wrap {
@@ -372,10 +389,17 @@
   height: 2.05rem;
   border-radius: 999px;
   border: 1px solid rgba(173, 197, 255, 0.46);
+  color: rgba(227, 237, 255, 0.9);
   display: grid;
   place-items: center;
-  font-size: 0.93rem;
-  text-transform: lowercase;
+  font-size: 0.88rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.ws-socials a:hover,
+.ws-socials a:focus {
+  border-color: rgba(198, 216, 255, 0.78);
+  background: rgba(101, 138, 255, 0.2);
 }
 
 .ws-email {
@@ -422,6 +446,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.32rem;
   min-height: 1.6rem;
   padding: 0.1rem 0.7rem;
   border-radius: 999px;
@@ -432,8 +457,24 @@
   letter-spacing: 0.06em;
 }
 
+.ws-chip-icon {
+  font-size: 0.64rem;
+}
+
 .ws-soft {
   color: rgba(223, 232, 255, 0.78);
+}
+
+.ws-kicker {
+  color: rgba(160, 211, 255, 0.92);
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.ws-card-title {
+  display: inline-flex;
+  align-items: center;
 }
 
 .ws-software-subtitle {
@@ -443,15 +484,24 @@
 
 .ws-capability-list {
   margin: 0;
-  padding-left: 1rem;
+  padding: 0;
+  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
 }
 
 .ws-capability-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   color: rgba(221, 232, 255, 0.9);
   font-size: 0.92rem;
+}
+
+.ws-capability-icon {
+  color: var(--ws-accent);
+  font-size: 0.75rem;
 }
 
 .ws-landing-shell .btn-outline-light {

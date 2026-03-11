@@ -1,5 +1,16 @@
 import { FormEvent, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArrowLeft,
+  faArrowRight,
+  faCircleCheck,
+  faCircleInfo,
+  faEnvelope,
+  faLock,
+  faLockOpen,
+  faShieldHalved
+} from "@fortawesome/free-solid-svg-icons";
 import { getSoftwareProducts } from "../../application/getSoftwareProducts";
 import { validateLoginCredentials } from "../../application/validateLoginCredentials";
 import { resolveSoftwareLaunchTarget } from "../../infrastructure/resolveSoftwareLaunchTarget";
@@ -34,6 +45,7 @@ export default function LoginSoftwarePage() {
           </Link>
           <div className="ms-auto d-flex align-items-center gap-2">
             <Link className="btn btn-sm btn-outline-light" to="/">
+              <FontAwesomeIcon icon={faArrowLeft} className="ws-inline-icon" />
               Back to Landing
             </Link>
           </div>
@@ -46,7 +58,10 @@ export default function LoginSoftwarePage() {
             <div className="col-lg-5">
               <article className="card border-0 ws-login-card">
                 <div className="card-body p-4">
-                  <p className="ws-kicker mb-2">Secure Access</p>
+                  <p className="ws-kicker mb-2">
+                    <FontAwesomeIcon icon={faShieldHalved} className="ws-inline-icon" />
+                    Secure Access
+                  </p>
                   <h1 className="h3 mb-3">Log in and select your software</h1>
                   <p className="ws-soft">
                     This first step gives your team a consistent entry point across Websys products.
@@ -54,6 +69,7 @@ export default function LoginSoftwarePage() {
                   <form className="mt-4" onSubmit={onSubmit} noValidate>
                     <div className="mb-3">
                       <label className="form-label" htmlFor="websys-email">
+                        <FontAwesomeIcon icon={faEnvelope} className="ws-inline-icon" />
                         Email
                       </label>
                       <input
@@ -68,6 +84,7 @@ export default function LoginSoftwarePage() {
                     </div>
                     <div className="mb-3">
                       <label className="form-label" htmlFor="websys-password">
+                        <FontAwesomeIcon icon={faLock} className="ws-inline-icon" />
                         Password
                       </label>
                       <input
@@ -82,10 +99,12 @@ export default function LoginSoftwarePage() {
                     </div>
                     {errorMessage ? (
                       <p className="alert alert-danger py-2 px-3" role="alert">
+                        <FontAwesomeIcon icon={faCircleInfo} className="ws-inline-icon" />
                         {errorMessage}
                       </p>
                     ) : null}
                     <button className="btn btn-primary w-100" type="submit">
+                      <FontAwesomeIcon icon={faArrowRight} className="ws-inline-icon" />
                       Continue
                     </button>
                   </form>
@@ -97,10 +116,14 @@ export default function LoginSoftwarePage() {
               <section className="ws-select-panel h-100">
                 <div className="d-flex justify-content-between align-items-center mb-3">
                   <h2 className="h4 mb-0">Select software</h2>
-                  <span className="ws-chip">{readyToSelect ? "Unlocked" : "Locked"}</span>
+                  <span className="ws-chip">
+                    <FontAwesomeIcon icon={readyToSelect ? faLockOpen : faLock} className="ws-chip-icon" />
+                    {readyToSelect ? "Unlocked" : "Locked"}
+                  </span>
                 </div>
                 {!readyToSelect ? (
                   <p className="ws-soft mb-0">
+                    <FontAwesomeIcon icon={faCircleInfo} className="ws-inline-icon" />
                     Enter credentials to unlock software options. WebsysPOS opens at
                     <code> /cloud/platform/hierarchy</code>.
                   </p>

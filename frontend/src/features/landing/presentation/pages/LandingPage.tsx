@@ -1,51 +1,79 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import {
+  faArrowRight,
+  faBriefcase,
+  faBuilding,
+  faChartLine,
+  faCloud,
+  faCode,
+  faCreditCard,
+  faGears,
+  faHeartPulse,
+  faLayerGroup,
+  faLightbulb,
+  faRightToBracket,
+  faStore
+} from "@fortawesome/free-solid-svg-icons";
+import { faFacebookF, faLinkedinIn, faXTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import "../styles/landing.css";
 
 const industries = [
   {
-    icon: "/branding/dev-pack/icons/dashboard.svg",
+    icon: faStore,
     title: "Retail",
     text: "POS, inventory, and sales analytics"
   },
   {
-    icon: "/branding/dev-pack/icons/cloud.svg",
+    icon: faCloud,
     title: "SaaS",
     text: "Subscriptions, customer insights, billing"
   },
   {
-    icon: "/branding/dev-pack/icons/automation.svg",
+    icon: faBriefcase,
     title: "Services",
     text: "Bookings, scheduling, and invoicing"
   },
   {
-    icon: "/branding/dev-pack/icons/analytics.svg",
+    icon: faHeartPulse,
     title: "Healthcare",
     text: "Patient management and e-payments"
   }
 ];
 
 const operationsHighlights = [
-  "Advanced dashboards",
-  "Workflow automation",
-  "Data-driven insights",
-  "Integrated payments"
+  { icon: faChartLine, text: "Advanced dashboards" },
+  { icon: faGears, text: "Workflow automation" },
+  { icon: faLightbulb, text: "Data-driven insights" },
+  { icon: faCreditCard, text: "Integrated payments" }
 ];
 
 const trustedBrands = ["PizzaHaus", "PeakTech", "MetroFit", "Swiftly", "BELL ASPA", "CraftRise"];
 
-const footerColumns = [
+const footerColumns: Array<{ icon: IconDefinition; title: string; links: string[] }> = [
   {
+    icon: faLayerGroup,
     title: "Platform",
     links: ["POS", "Automation", "Payments"]
   },
   {
+    icon: faBuilding,
     title: "Company",
     links: ["About", "Careers", "Contact"]
   },
   {
+    icon: faCode,
     title: "Developers",
     links: ["API Documentation", "Help Center", "Status"]
   }
+];
+
+const socialLinks = [
+  { label: "LinkedIn", icon: faLinkedinIn },
+  { label: "X", icon: faXTwitter },
+  { label: "YouTube", icon: faYoutube },
+  { label: "Facebook", icon: faFacebookF }
 ];
 
 export default function LandingPage() {
@@ -83,6 +111,7 @@ export default function LandingPage() {
               </a>
             </nav>
             <Link to="/login" className="ws-login-link nav-link ms-lg-3">
+              <FontAwesomeIcon icon={faRightToBracket} className="ws-inline-icon" />
               Login
             </Link>
           </div>
@@ -100,6 +129,7 @@ export default function LandingPage() {
                 </p>
                 <div className="d-flex flex-wrap gap-2 ws-hero-actions">
                   <Link to="/login" className="btn btn-lg ws-primary-btn w-100 w-md-auto">
+                    <FontAwesomeIcon icon={faArrowRight} className="ws-inline-icon" />
                     Explore Platform
                   </Link>
                 </div>
@@ -134,7 +164,7 @@ export default function LandingPage() {
                   <article className="ws-industry-card">
                     <div className="ws-industry-top">
                       <span className="ws-industry-icon">
-                        <img src={industry.icon} alt="" aria-hidden="true" />
+                        <FontAwesomeIcon icon={industry.icon} />
                       </span>
                       <h3>{industry.title}</h3>
                     </div>
@@ -152,7 +182,10 @@ export default function LandingPage() {
             <h2 className="ws-section-title ws-line-title">Built to Power Your Entire Operation</h2>
             <div className="ws-highlight-row">
               {operationsHighlights.map((item) => (
-                <span key={item}>✓ {item}</span>
+                <span key={item.text}>
+                  <FontAwesomeIcon icon={item.icon} className="ws-highlight-icon" />
+                  {item.text}
+                </span>
               ))}
             </div>
 
@@ -175,7 +208,10 @@ export default function LandingPage() {
           <div className="row g-4 align-items-start">
             {footerColumns.map((group) => (
               <div className="col-6 col-md-3" key={group.title}>
-                <h4>{group.title}</h4>
+                <h4>
+                  <FontAwesomeIcon icon={group.icon} className="ws-inline-icon" />
+                  {group.title}
+                </h4>
                 <ul>
                   {group.links.map((link) => (
                     <li key={link}>
@@ -189,18 +225,11 @@ export default function LandingPage() {
             ))}
             <div className="col-12 col-md-3 ms-md-auto">
               <div className="ws-socials">
-                <a href="#" aria-label="LinkedIn" onClick={(event) => event.preventDefault()}>
-                  in
-                </a>
-                <a href="#" aria-label="Twitter" onClick={(event) => event.preventDefault()}>
-                  t
-                </a>
-                <a href="#" aria-label="YouTube" onClick={(event) => event.preventDefault()}>
-                  y
-                </a>
-                <a href="#" aria-label="Facebook" onClick={(event) => event.preventDefault()}>
-                  f
-                </a>
+                {socialLinks.map((social) => (
+                  <a key={social.label} href="#" aria-label={social.label} onClick={(event) => event.preventDefault()}>
+                    <FontAwesomeIcon icon={social.icon} />
+                  </a>
+                ))}
               </div>
               <a className="ws-email" href="mailto:support@websysit.com">
                 support@websysit.com
