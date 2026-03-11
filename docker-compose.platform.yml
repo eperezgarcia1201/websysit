@@ -58,7 +58,10 @@ services:
       - "15173:80"
     networks:
       - websys_platform
+      - proxy
 
 networks:
   websys_platform:
     name: websys_platform_net
+  proxy:
+    external: true
