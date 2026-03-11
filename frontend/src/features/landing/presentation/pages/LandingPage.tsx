@@ -3,105 +3,127 @@ import "../styles/landing.css";
 
 const industries = [
   {
+    icon: "▣",
     title: "Retail",
-    text: "POS, inventory health, and live sales visibility from one dashboard."
+    text: "POS, inventory, and sales analytics"
   },
   {
-    title: "Restaurants",
-    text: "Front-of-house, kitchen workflows, online orders, and settlement in one flow."
+    icon: "◉",
+    title: "SaaS",
+    text: "Subscriptions, customer insights, billing"
   },
   {
-    title: "Service Businesses",
-    text: "Scheduling, invoicing, payroll sync, and operational analytics."
+    icon: "⌂",
+    title: "Services",
+    text: "Bookings, scheduling, and invoicing"
   },
   {
+    icon: "♡",
     title: "Healthcare",
-    text: "Patient-facing transactions, appointment operations, and secure payments."
+    text: "Patient management and e-payments"
   }
 ];
 
-const principles = [
-  "Feature-first architecture for safer growth",
-  "Guardrails and validation on every migration chunk",
-  "Cloud hierarchy and role-aware access patterns",
-  "Operational dashboards for daily decision speed"
+const operationsHighlights = [
+  "Advanced dashboards",
+  "Workflow automation",
+  "Data-driven insights",
+  "Integrated payments"
+];
+
+const trustedBrands = ["PizzaHaus", "PeakTech", "MetroFit", "Swiftly", "BELL ASPA", "CraftRise"];
+
+const footerGroups = [
+  {
+    title: "Platform",
+    links: ["POS", "Automation", "Payments"]
+  },
+  {
+    title: "Company",
+    links: ["About", "Careers", "Contact"]
+  },
+  {
+    title: "Developers",
+    links: ["API Documentation", "Help Center", "Status"]
+  }
 ];
 
 export default function LandingPage() {
   return (
     <div className="ws-landing-shell">
-      <header className="navbar navbar-expand-lg ws-nav">
-        <div className="container-xl">
-          <Link className="navbar-brand ws-brand" to="/">
+      <header className="ws-nav-wrap">
+        <div className="container-xl ws-nav-inner">
+          <Link className="ws-brand" to="/">
             WEBSYS
           </Link>
-          <nav className="d-none d-lg-flex gap-4 align-items-center ms-auto">
+          <nav className="ws-nav-links d-none d-md-flex" aria-label="Main navigation">
             <a href="#platform" className="ws-nav-link">
               Platform
             </a>
-            <a href="#industries" className="ws-nav-link">
-              Industries
+            <a href="#solutions" className="ws-nav-link">
+              Solutions
             </a>
-            <a href="#roadmap" className="ws-nav-link">
-              Refactor OS
+            <a href="#pricing" className="ws-nav-link">
+              Pricing
             </a>
-            <Link to="/login" className="btn btn-sm btn-outline-light">
-              Login
-            </Link>
+            <a href="#resources" className="ws-nav-link">
+              Resources
+            </a>
           </nav>
+          <Link to="/login" className="ws-login-link">
+            Login
+          </Link>
         </div>
       </header>
 
       <main>
-        <section className="ws-hero section-padding">
+        <section className="ws-hero-block">
           <div className="container-xl">
-            <div className="row g-4 align-items-center">
-              <div className="col-lg-6">
-                <p className="ws-kicker mb-2">Websys Cloud Platform</p>
-                <h1 className="display-5 fw-semibold mb-3">Software Design for Modern Business Operations</h1>
-                <p className="lead ws-soft mb-4">
-                  Unified platform for payments, automation, reporting, and operational control. Built to scale from a
-                  single store to multi-tenant cloud hierarchy.
+            <div className="row align-items-center g-5">
+              <div className="col-lg-5">
+                <h1 className="ws-hero-title">Software Design for Modern Business</h1>
+                <p className="ws-hero-copy">
+                  Powerful, integrated platform providing analytics, automation, and payments to scale any business.
                 </p>
                 <div className="d-flex flex-wrap gap-2">
-                  <Link to="/login" className="btn btn-primary btn-lg">
+                  <Link to="/login" className="btn btn-lg ws-primary-btn">
                     Explore Platform
-                  </Link>
-                  <Link to="/cloud/platform/hierarchy" className="btn btn-outline-light btn-lg">
-                    Open WebsysPOS
                   </Link>
                 </div>
               </div>
-              <div className="col-lg-6">
-                <div className="ws-hero-panel card border-0">
-                  <div className="card-body p-4">
-                    <h2 className="h4 mb-3">Platform Highlights</h2>
-                    <div className="row g-3">
-                      <div className="col-sm-6">
-                        <div className="ws-stat-card">
-                          <span className="ws-stat-number">99.95%</span>
-                          <span className="ws-soft">Service availability target</span>
-                        </div>
-                      </div>
-                      <div className="col-sm-6">
-                        <div className="ws-stat-card">
-                          <span className="ws-stat-number">2 apps</span>
-                          <span className="ws-soft">WebsysPOS + WebsysClockIn</span>
-                        </div>
-                      </div>
-                      <div className="col-sm-6">
-                        <div className="ws-stat-card">
-                          <span className="ws-stat-number">5 phases</span>
-                          <span className="ws-soft">Production refactor operating model</span>
-                        </div>
-                      </div>
-                      <div className="col-sm-6">
-                        <div className="ws-stat-card">
-                          <span className="ws-stat-number">0 breaks</span>
-                          <span className="ws-soft">Goal: zero API contract regressions</span>
-                        </div>
-                      </div>
+
+              <div className="col-lg-7">
+                <div className="ws-hero-visual" aria-hidden="true">
+                  <div className="ws-hero-glow" />
+                  <div className="ws-screen ws-screen-back" />
+                  <div className="ws-screen ws-screen-main">
+                    <div className="ws-screen-head">
+                      <span>WEBSYS</span>
+                      <strong>$28,500</strong>
                     </div>
+                    <div className="ws-screen-chart" />
+                    <div className="ws-screen-table">
+                      <span />
+                      <span />
+                      <span />
+                      <span />
+                    </div>
+                  </div>
+                  <div className="ws-screen ws-screen-front">
+                    <div className="ws-mini-row" />
+                    <div className="ws-mini-row" />
+                    <div className="ws-mini-row" />
+                    <div className="ws-mini-pill" />
+                  </div>
+                  <div className="ws-floating ws-floating-left">
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+                  <div className="ws-floating ws-floating-right">
+                    <span />
+                    <span />
+                    <span />
                   </div>
                 </div>
               </div>
@@ -109,22 +131,16 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section id="industries" className="section-padding">
+        <section id="solutions" className="ws-section">
           <div className="container-xl">
-            <div className="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4">
-              <div>
-                <p className="ws-kicker mb-1">Industry Fit</p>
-                <h2 className="h2 mb-0">A Scalable Platform for Every Team</h2>
-              </div>
-            </div>
-            <div className="row g-3">
+            <h2 className="ws-section-title">A Scalable Platform for Every Industry</h2>
+            <div className="row g-3 mt-1">
               {industries.map((industry) => (
                 <div className="col-md-6 col-xl-3" key={industry.title}>
-                  <article className="card border-0 h-100 ws-industry-card">
-                    <div className="card-body">
-                      <h3 className="h5">{industry.title}</h3>
-                      <p className="mb-0 ws-soft">{industry.text}</p>
-                    </div>
+                  <article className="ws-industry-card">
+                    <div className="ws-industry-icon">{industry.icon}</div>
+                    <h3>{industry.title}</h3>
+                    <p>{industry.text}</p>
                   </article>
                 </div>
               ))}
@@ -132,49 +148,79 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section id="roadmap" className="section-padding">
+        <section id="platform" className="ws-section">
           <div className="container-xl">
-            <div className="row g-4 align-items-stretch">
-              <div className="col-lg-6">
-                <article className="card border-0 h-100 ws-roadmap-card">
-                  <div className="card-body p-4">
-                    <p className="ws-kicker mb-2">Production Refactor Workbook</p>
-                    <h2 className="h3">Built for safe migration and growth</h2>
-                    <ul className="ws-principle-list mb-0">
-                      {principles.map((principle) => (
-                        <li key={principle}>{principle}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </article>
+            <h2 className="ws-section-title">Built to Power Your Entire Operation</h2>
+            <div className="ws-highlight-row">
+              {operationsHighlights.map((item) => (
+                <span key={item}>✓ {item}</span>
+              ))}
+            </div>
+
+            <div className="ws-ops-frame">
+              <div className="ws-ops-main">
+                <div className="ws-ops-head">WEBSYS</div>
+                <div className="ws-ops-chart" />
+                <div className="ws-ops-metrics">
+                  <span />
+                  <span />
+                  <span />
+                </div>
               </div>
-              <div className="col-lg-6">
-                <article className="card border-0 h-100 ws-roadmap-card">
-                  <div className="card-body p-4">
-                    <h2 className="h4">Get Started</h2>
-                    <p className="ws-soft">
-                      Enter through Login, pick your software, and continue with role-based access and cloud hierarchy.
-                    </p>
-                    <div className="d-grid gap-2 d-sm-flex">
-                      <Link to="/login" className="btn btn-primary">
-                        Login and Select Software
-                      </Link>
-                      <a
-                        href="https://websysclockin.com"
-                        className="btn btn-outline-light"
-                        rel="noreferrer"
-                        target="_blank"
-                      >
-                        Open WebsysClockIn
-                      </a>
-                    </div>
-                  </div>
-                </article>
+              <div className="ws-ops-panel">
+                <div className="ws-ops-panel-row" />
+                <div className="ws-ops-panel-row" />
+                <div className="ws-ops-panel-row" />
               </div>
+            </div>
+
+            <p className="ws-trust-copy">Trusted by thousands of growing businesses across the United States</p>
+            <div className="ws-brand-row">
+              {trustedBrands.map((brand) => (
+                <span key={brand}>{brand}</span>
+              ))}
             </div>
           </div>
         </section>
       </main>
+
+      <footer className="ws-footer" id="resources">
+        <div className="container-xl">
+          <div className="row g-4 align-items-start">
+            {footerGroups.map((group) => (
+              <div className="col-6 col-md-3" key={group.title}>
+                <h4>{group.title}</h4>
+                <ul>
+                  {group.links.map((link) => (
+                    <li key={link}>
+                      <a href="#">{link}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+            <div className="col-12 col-md-3 ms-md-auto">
+              <div className="ws-socials" id="pricing">
+                <a href="#" aria-label="LinkedIn">
+                  in
+                </a>
+                <a href="#" aria-label="X">
+                  x
+                </a>
+                <a href="#" aria-label="YouTube">
+                  ▶
+                </a>
+                <a href="#" aria-label="Facebook">
+                  f
+                </a>
+              </div>
+              <a className="ws-email" href="mailto:support@websysit.com">
+                support@websysit.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
