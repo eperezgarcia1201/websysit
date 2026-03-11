@@ -51,48 +51,61 @@ const footerColumns = [
 export default function LandingPage() {
   return (
     <div className="ws-landing-shell ws-landing-v2">
-      <header className="ws-nav-wrap">
+      <header className="ws-nav-wrap navbar navbar-expand-lg">
         <div className="container-xl ws-nav-inner">
           <Link className="ws-brand" to="/">
             WEBSYS
           </Link>
-          <nav className="ws-nav-links d-none d-md-flex" aria-label="Main navigation">
-            <a href="#platform" className="ws-nav-link">
-              Platform
-            </a>
-            <a href="#solutions" className="ws-nav-link">
-              Solutions
-            </a>
-            <a href="#pricing" className="ws-nav-link">
-              Pricing
-            </a>
-            <a href="#resources" className="ws-nav-link">
-              Resources
-            </a>
-          </nav>
-          <Link to="/login" className="ws-login-link">
-            Login
-          </Link>
+          <button
+            className="navbar-toggler ws-nav-toggle"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#ws-main-nav"
+            aria-controls="ws-main-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon" />
+          </button>
+          <div className="collapse navbar-collapse ws-nav-collapse" id="ws-main-nav">
+            <nav className="navbar-nav ws-nav-links mx-lg-auto" aria-label="Main navigation">
+              <a href="#platform" className="ws-nav-link nav-link">
+                Platform
+              </a>
+              <a href="#solutions" className="ws-nav-link nav-link">
+                Solutions
+              </a>
+              <a href="#pricing" className="ws-nav-link nav-link">
+                Pricing
+              </a>
+              <a href="#resources" className="ws-nav-link nav-link">
+                Resources
+              </a>
+            </nav>
+            <Link to="/login" className="ws-login-link nav-link ms-lg-3">
+              Login
+            </Link>
+          </div>
         </div>
       </header>
 
-      <main>
+      <main className="pb-4 pb-lg-0">
         <section className="ws-hero-block">
           <div className="container-xl">
-            <div className="row align-items-center g-5">
-              <div className="col-lg-5">
+            <div className="row align-items-center g-4 g-lg-5">
+              <div className="col-12 col-lg-5">
                 <h1 className="ws-hero-title">Software Design for Modern Business</h1>
                 <p className="ws-hero-copy">
                   Powerful, integrated platform providing analytics, automation, and payments to scale any business.
                 </p>
                 <div className="d-flex flex-wrap gap-2 ws-hero-actions">
-                  <Link to="/login" className="btn btn-lg ws-primary-btn">
+                  <Link to="/login" className="btn btn-lg ws-primary-btn w-100 w-md-auto">
                     Explore Platform
                   </Link>
                 </div>
               </div>
 
-              <div className="col-lg-7">
+              <div className="col-12 col-lg-7">
                 <div className="ws-hero-visual-wrap">
                   <img
                     src="/branding/dev-pack/background/hero-gradient.png"

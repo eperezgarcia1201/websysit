@@ -46,6 +46,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -70,6 +71,10 @@
   align-items: center;
 }
 
+.ws-nav-collapse .nav-link {
+  padding: 0 !important;
+}
+
 .ws-nav-link {
   text-decoration: none;
   color: rgba(226, 236, 255, 0.84);
@@ -91,6 +96,26 @@
 .ws-login-link:hover,
 .ws-login-link:focus {
   color: #fff;
+}
+
+.ws-nav-collapse {
+  align-items: center;
+  flex-grow: 1;
+}
+
+.ws-nav-toggle {
+  border-color: rgba(182, 205, 255, 0.5);
+  padding: 0.36rem 0.48rem;
+}
+
+.ws-nav-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(121, 166, 255, 0.26);
+}
+
+.ws-nav-toggle .navbar-toggler-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(232,242,255,0.92)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .ws-hero-block {
@@ -462,6 +487,25 @@
     min-height: 78px;
   }
 
+  .ws-nav-collapse {
+    width: 100%;
+    margin-top: 0.45rem;
+    padding: 0.65rem 0 0.35rem;
+    border-top: 1px solid rgba(141, 167, 236, 0.23);
+    align-items: flex-start;
+  }
+
+  .ws-nav-links {
+    gap: 0.18rem;
+    align-items: flex-start;
+  }
+
+  .ws-nav-link,
+  .ws-login-link {
+    font-size: 1.02rem;
+    padding: 0.42rem 0 !important;
+  }
+
   .ws-hero-block {
     padding-top: 2.8rem;
   }
@@ -501,10 +545,6 @@
 
   .ws-brand {
     font-size: 1.72rem;
-  }
-
-  .ws-login-link {
-    font-size: 1.05rem;
   }
 
   .ws-hero-title {
