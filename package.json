@@ -1,0 +1,15 @@
+{
+  "name": "websysit-workspace",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "build:frontend": "npm --prefix frontend run build:platform",
+    "build:backend": "npm --prefix backend run build",
+    "check:lines": "node tools/guardrails/check-lines.mjs",
+    "check:no-direct-fetch": "node tools/guardrails/check-no-direct-fetch.mjs",
+    "validate": "npm run build:frontend && npm run build:backend && npm run check:lines && npm run check:no-direct-fetch"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

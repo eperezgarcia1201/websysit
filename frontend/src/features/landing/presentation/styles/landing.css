@@ -1,0 +1,182 @@
+.ws-landing-shell {
+  min-height: 100vh;
+  color: #e6ecff;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(65, 105, 255, 0.22), transparent 44%),
+    radial-gradient(circle at 82% 12%, rgba(14, 184, 255, 0.2), transparent 38%),
+    linear-gradient(160deg, #060914 0%, #090f2d 54%, #040712 100%);
+}
+
+.ws-nav {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(7, 10, 26, 0.72);
+  backdrop-filter: blur(8px);
+}
+
+.ws-brand {
+  color: #f8fbff;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.ws-brand:hover,
+.ws-brand:focus {
+  color: #f8fbff;
+}
+
+.ws-nav-link {
+  color: rgba(232, 240, 255, 0.85);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.ws-nav-link:hover,
+.ws-nav-link:focus {
+  color: #fff;
+}
+
+.section-padding {
+  padding: 4.5rem 0;
+}
+
+.ws-kicker {
+  margin: 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: #8bb8ff;
+}
+
+.ws-soft {
+  color: rgba(223, 232, 255, 0.78);
+}
+
+.ws-hero-panel,
+.ws-industry-card,
+.ws-roadmap-card,
+.ws-login-card,
+.ws-software-card,
+.ws-select-panel {
+  background: linear-gradient(145deg, rgba(22, 35, 76, 0.95), rgba(9, 15, 38, 0.94));
+  border: 1px solid rgba(143, 176, 255, 0.22);
+  box-shadow: 0 24px 48px rgba(2, 8, 28, 0.42);
+  border-radius: 1rem;
+}
+
+.ws-stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.85rem 0.9rem;
+  border-radius: 0.8rem;
+  background: rgba(16, 25, 56, 0.86);
+  border: 1px solid rgba(161, 184, 255, 0.18);
+}
+
+.ws-stat-number {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ecf2ff;
+}
+
+.ws-industry-card {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.ws-industry-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(190, 210, 255, 0.4);
+}
+
+.ws-principle-list {
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.ws-principle-list li {
+  color: rgba(232, 240, 255, 0.9);
+}
+
+.ws-access-shell {
+  background:
+    radial-gradient(circle at 80% 0%, rgba(63, 196, 255, 0.2), transparent 36%),
+    radial-gradient(circle at 10% 15%, rgba(99, 102, 241, 0.3), transparent 32%),
+    linear-gradient(170deg, #050814, #080f2a 60%, #040611);
+}
+
+.ws-login-card .form-control {
+  background-color: rgba(12, 19, 45, 0.95);
+  border-color: rgba(161, 184, 255, 0.25);
+  color: #ecf2ff;
+}
+
+.ws-login-card .form-control::placeholder {
+  color: rgba(206, 222, 255, 0.58);
+}
+
+.ws-login-card .form-label {
+  color: rgba(223, 232, 255, 0.95);
+}
+
+.ws-select-panel {
+  padding: 1.2rem;
+}
+
+.ws-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1.6rem;
+  padding: 0.1rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(142, 206, 255, 0.55);
+  color: #bde3ff;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.ws-software-subtitle {
+  color: rgba(191, 214, 255, 0.83);
+  font-size: 0.92rem;
+}
+
+.ws-capability-list {
+  margin: 0;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.ws-capability-list li {
+  color: rgba(221, 232, 255, 0.9);
+  font-size: 0.92rem;
+}
+
+.ws-landing-shell .btn-primary {
+  background: linear-gradient(90deg, #3f7eff, #4892ff);
+  border-color: #579eff;
+}
+
+.ws-landing-shell .btn-outline-light {
+  border-color: rgba(235, 243, 255, 0.58);
+}
+
+.ws-landing-shell code {
+  color: #bde3ff;
+}
+
+@media (max-width: 991.98px) {
+  .section-padding {
+    padding: 3.6rem 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section-padding {
+    padding: 3rem 0;
+  }
+}
