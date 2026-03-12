@@ -13,14 +13,29 @@
   --ws-card: linear-gradient(150deg, rgba(20, 32, 80, 0.95), rgba(9, 15, 38, 0.9));
 }
 
+.ws-landing-v2 {
+  --ws-primary: #214fc6;
+  --ws-accent: #0f9ad6;
+  --ws-bg-top: #f8fbff;
+  --ws-bg-mid: #eef4ff;
+  --ws-bg-bot: #e7eefc;
+  --ws-heading: #0f234d;
+  --ws-text: #21365e;
+  --ws-soft: #47648e;
+  --ws-muted: #5d759b;
+  --ws-label: #2c72ca;
+  --ws-border: rgba(87, 122, 193, 0.18);
+  --ws-card: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 249, 255, 0.98));
+}
+
 .ws-landing-shell {
   min-height: 100vh;
   color: var(--ws-text);
   font-family: "Poppins", "Rajdhani", "Segoe UI", sans-serif;
   position: relative;
   background:
-    radial-gradient(circle at 15% 23%, rgba(83, 118, 255, 0.27), transparent 36%),
-    radial-gradient(circle at 83% 8%, rgba(31, 180, 255, 0.2), transparent 40%),
+    radial-gradient(circle at 15% 23%, rgba(124, 163, 255, 0.28), transparent 36%),
+    radial-gradient(circle at 83% 8%, rgba(132, 222, 255, 0.25), transparent 40%),
     linear-gradient(180deg, var(--ws-bg-top) 0%, var(--ws-bg-mid) 50%, var(--ws-bg-bot) 100%);
 }
 
@@ -30,16 +45,16 @@
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(110deg, rgba(255, 255, 255, 0.025) 0%, transparent 25%),
-    linear-gradient(330deg, rgba(255, 255, 255, 0.03) 0%, transparent 28%);
+    linear-gradient(110deg, rgba(255, 255, 255, 0.38) 0%, transparent 28%),
+    linear-gradient(330deg, rgba(175, 201, 255, 0.18) 0%, transparent 30%);
 }
 
 .ws-nav-wrap {
   position: sticky;
   top: 0;
   z-index: 20;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-  background: rgba(5, 8, 21, 0.84);
+  border-bottom: 1px solid rgba(140, 168, 224, 0.22);
+  background: rgba(250, 252, 255, 0.88);
   backdrop-filter: blur(9px);
 }
 
@@ -65,7 +80,7 @@
 
 .ws-brand:hover,
 .ws-brand:focus {
-  color: #fff;
+  color: #15326a;
 }
 
 .ws-inline-icon {
@@ -84,26 +99,26 @@
 
 .ws-nav-link {
   text-decoration: none;
-  color: rgba(226, 236, 255, 0.92);
+  color: rgba(35, 56, 96, 0.84);
   font-size: 1.1rem;
   font-weight: 500;
 }
 
 .ws-nav-link:hover,
 .ws-nav-link:focus {
-  color: #fff;
+  color: var(--ws-primary);
 }
 
 .ws-login-link {
   text-decoration: none;
-  color: rgba(236, 244, 255, 0.98);
+  color: rgba(22, 41, 78, 0.94);
   font-size: 1.14rem;
   font-weight: 500;
 }
 
 .ws-login-link:hover,
 .ws-login-link:focus {
-  color: #fff;
+  color: var(--ws-primary);
 }
 
 .ws-nav-collapse {
@@ -112,8 +127,9 @@
 }
 
 .ws-nav-toggle {
-  border-color: rgba(182, 205, 255, 0.5);
+  border-color: rgba(101, 132, 206, 0.36);
   padding: 0.36rem 0.48rem;
+  background: rgba(255, 255, 255, 0.75);
 }
 
 .ws-nav-toggle:focus {
@@ -123,7 +139,7 @@
 .ws-nav-toggle .navbar-toggler-icon {
   width: 1.15rem;
   height: 1.15rem;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(232,242,255,0.92)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(17,39,82,0.88)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .ws-hero-block {
@@ -163,9 +179,9 @@
   height: 100%;
   padding: 0.95rem 1rem;
   border-radius: 0.88rem;
-  border: 1px solid rgba(156, 181, 255, 0.28);
-  background: linear-gradient(145deg, rgba(17, 27, 70, 0.84), rgba(8, 12, 31, 0.72));
-  box-shadow: 0 16px 30px rgba(3, 7, 22, 0.28);
+  border: 1px solid rgba(122, 153, 223, 0.22);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(243, 247, 255, 0.96));
+  box-shadow: 0 18px 34px rgba(66, 98, 153, 0.11);
 }
 
 .ws-metric-card strong {
@@ -198,19 +214,19 @@
 .ws-primary-btn:hover,
 .ws-primary-btn:focus {
   color: #fff;
-  background: linear-gradient(135deg, #284799, #183274);
+  background: linear-gradient(135deg, #2a59d6, #17347a);
 }
 
 .ws-hero-visual-wrap {
   position: relative;
   border-radius: 1rem;
-  border: 1px solid rgba(149, 180, 255, 0.3);
+  border: 1px solid rgba(129, 159, 221, 0.24);
   background:
-    radial-gradient(circle at 75% 20%, rgba(65, 120, 255, 0.3), transparent 40%),
-    linear-gradient(180deg, rgba(10, 17, 41, 0.96), rgba(6, 11, 29, 0.96));
+    radial-gradient(circle at 75% 20%, rgba(65, 120, 255, 0.18), transparent 40%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(234, 242, 255, 0.9));
   overflow: hidden;
   min-height: 420px;
-  box-shadow: 0 25px 45px rgba(1, 7, 27, 0.55);
+  box-shadow: 0 28px 48px rgba(70, 100, 153, 0.18);
 }
 
 .ws-hero-visual {
@@ -293,7 +309,7 @@
 .ws-line-title::after {
   content: "";
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(137, 168, 255, 0.7), transparent);
+  background: linear-gradient(90deg, transparent, rgba(103, 140, 223, 0.7), transparent);
 }
 
 .ws-industry-card {
@@ -302,7 +318,7 @@
   border-radius: 0.88rem;
   background: var(--ws-card);
   padding: 1.08rem 1.05rem 1.12rem;
-  box-shadow: 0 18px 28px rgba(0, 7, 28, 0.45);
+  box-shadow: 0 18px 34px rgba(70, 100, 153, 0.11);
 }
 
 .ws-industry-top {
@@ -315,10 +331,10 @@
   width: 1.62rem;
   height: 1.62rem;
   border-radius: 999px;
-  border: 1px solid rgba(155, 195, 255, 0.5);
+  border: 1px solid rgba(126, 162, 223, 0.24);
   display: grid;
   place-items: center;
-  background: rgba(8, 20, 58, 0.8);
+  background: rgba(230, 241, 255, 0.92);
 }
 
 .ws-industry-icon img {
@@ -343,7 +359,7 @@
 .ws-industry-divider {
   margin: 0.8rem 0 0.78rem;
   height: 1px;
-  background: linear-gradient(90deg, rgba(170, 194, 255, 0.36), rgba(170, 194, 255, 0));
+  background: linear-gradient(90deg, rgba(112, 149, 226, 0.34), rgba(112, 149, 226, 0));
 }
 
 .ws-industry-card p {
@@ -358,10 +374,10 @@
 .ws-playbook-card,
 .ws-footer-panel {
   height: 100%;
-  border: 1px solid rgba(153, 181, 255, 0.24);
+  border: 1px solid rgba(126, 162, 223, 0.2);
   border-radius: 1rem;
-  background: linear-gradient(150deg, rgba(14, 23, 61, 0.96), rgba(7, 12, 30, 0.92));
-  box-shadow: 0 18px 30px rgba(1, 7, 25, 0.34);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(243, 247, 255, 0.98));
+  box-shadow: 0 18px 34px rgba(70, 100, 153, 0.1);
 }
 
 .ws-service-card,
@@ -376,9 +392,9 @@
   display: grid;
   place-items: center;
   border-radius: 0.88rem;
-  border: 1px solid rgba(155, 190, 255, 0.34);
-  background: rgba(16, 30, 84, 0.78);
-  color: #9bdcff;
+  border: 1px solid rgba(122, 156, 221, 0.22);
+  background: linear-gradient(180deg, rgba(233, 244, 255, 1), rgba(221, 235, 255, 1));
+  color: var(--ws-primary);
   font-size: 1.05rem;
 }
 
@@ -409,9 +425,9 @@
   min-height: 1.85rem;
   padding: 0.2rem 0.7rem;
   border-radius: 999px;
-  border: 1px solid rgba(151, 209, 255, 0.44);
-  background: rgba(10, 22, 56, 0.55);
-  color: #d4ecff;
+  border: 1px solid rgba(124, 164, 224, 0.24);
+  background: rgba(232, 242, 255, 0.92);
+  color: #3a629c;
   font-size: 0.82rem;
   line-height: 1;
   text-transform: uppercase;
@@ -459,8 +475,8 @@
   gap: 0.6rem;
   padding: 0.86rem 1rem;
   border-radius: 0.88rem;
-  border: 1px solid rgba(145, 173, 249, 0.2);
-  background: rgba(12, 18, 47, 0.58);
+  border: 1px solid rgba(125, 160, 221, 0.18);
+  background: rgba(250, 252, 255, 0.92);
   color: var(--ws-text);
   font-size: 1rem;
 }
@@ -468,10 +484,11 @@
 .ws-ops-wrap {
   border-radius: 1rem;
   background:
-    radial-gradient(circle at 50% 115%, rgba(96, 120, 241, 0.44), transparent 48%),
-    linear-gradient(160deg, rgba(11, 20, 53, 0.95), rgba(7, 13, 34, 0.92));
-  border: 1px solid rgba(153, 182, 255, 0.26);
+    radial-gradient(circle at 50% 115%, rgba(132, 153, 241, 0.18), transparent 48%),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.96), rgba(241, 247, 255, 0.96));
+  border: 1px solid rgba(126, 162, 223, 0.2);
   padding: 0.65rem;
+  box-shadow: 0 18px 34px rgba(70, 100, 153, 0.11);
 }
 
 .ws-ops-visual {
@@ -502,8 +519,8 @@
   min-height: 2.15rem;
   padding: 0.2rem 0.95rem;
   border-radius: 999px;
-  border: 1px solid rgba(149, 178, 255, 0.25);
-  background: rgba(12, 18, 44, 0.5);
+  border: 1px solid rgba(126, 162, 223, 0.18);
+  background: rgba(255, 255, 255, 0.9);
   color: var(--ws-text);
   font-size: 0.95rem;
   font-weight: 500;
@@ -517,11 +534,11 @@
   align-items: center;
   padding: 1.6rem;
   border-radius: 1.15rem;
-  border: 1px solid rgba(160, 189, 255, 0.28);
+  border: 1px solid rgba(126, 162, 223, 0.2);
   background:
-    radial-gradient(circle at top right, rgba(67, 120, 255, 0.18), transparent 32%),
-    linear-gradient(155deg, rgba(16, 24, 61, 0.98), rgba(7, 11, 28, 0.94));
-  box-shadow: 0 24px 44px rgba(2, 7, 22, 0.34);
+    radial-gradient(circle at top right, rgba(115, 167, 255, 0.2), transparent 32%),
+    linear-gradient(155deg, rgba(255, 255, 255, 0.98), rgba(240, 247, 255, 0.98));
+  box-shadow: 0 24px 44px rgba(70, 100, 153, 0.13);
 }
 
 .ws-chip-row {
@@ -541,8 +558,8 @@
 .ws-footer {
   margin-top: 1.4rem;
   padding: 2.7rem 0 3.2rem;
-  border-top: 1px solid rgba(147, 176, 255, 0.24);
-  background: linear-gradient(180deg, rgba(8, 13, 32, 0.7), rgba(5, 9, 23, 0.92));
+  border-top: 1px solid rgba(140, 168, 224, 0.22);
+  background: linear-gradient(180deg, rgba(244, 248, 255, 0.9), rgba(235, 242, 254, 0.98));
 }
 
 .ws-footer h4 {
@@ -562,13 +579,13 @@
 
 .ws-footer a {
   text-decoration: none;
-  color: rgba(221, 232, 250, 0.88);
+  color: rgba(42, 65, 108, 0.9);
   font-size: 1.17rem;
 }
 
 .ws-footer a:hover,
 .ws-footer a:focus {
-  color: #fff;
+  color: var(--ws-primary);
 }
 
 .ws-socials {
@@ -582,8 +599,8 @@
   width: 2.05rem;
   height: 2.05rem;
   border-radius: 999px;
-  border: 1px solid rgba(173, 197, 255, 0.46);
-  color: rgba(227, 237, 255, 0.9);
+  border: 1px solid rgba(123, 158, 223, 0.22);
+  color: rgba(35, 58, 101, 0.88);
   display: grid;
   place-items: center;
   font-size: 0.88rem;
@@ -592,8 +609,8 @@
 
 .ws-socials a:hover,
 .ws-socials a:focus {
-  border-color: rgba(198, 216, 255, 0.78);
-  background: rgba(101, 138, 255, 0.2);
+  border-color: rgba(84, 123, 210, 0.35);
+  background: rgba(215, 230, 255, 0.9);
 }
 
 .ws-email {
@@ -703,7 +720,9 @@
 }
 
 .ws-landing-shell .btn-outline-light {
-  border-color: rgba(235, 243, 255, 0.58);
+  border-color: rgba(95, 130, 204, 0.34);
+  color: #1b3c84;
+  background: rgba(255, 255, 255, 0.92);
 }
 
 .ws-landing-shell code {
