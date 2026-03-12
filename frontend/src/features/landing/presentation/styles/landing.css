@@ -39,6 +39,11 @@
     linear-gradient(180deg, var(--ws-bg-top) 0%, var(--ws-bg-mid) 50%, var(--ws-bg-bot) 100%);
 }
 
+.ws-page-wrap {
+  width: 100%;
+  padding-inline: clamp(1.25rem, 4vw, 4.5rem);
+}
+
 .ws-landing-shell::before {
   content: "";
   position: absolute;
@@ -807,6 +812,10 @@
 }
 
 @media (max-width: 767.98px) {
+  .ws-page-wrap {
+    padding-inline: 1rem;
+  }
+
   .ws-nav-inner {
     gap: 0.7rem;
   }

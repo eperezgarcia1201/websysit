@@ -28,7 +28,7 @@ export default function LandingPage() {
   return (
     <div className="ws-landing-shell ws-landing-v2">
       <header className="ws-nav-wrap navbar navbar-expand-lg">
-        <div className="container-xl ws-nav-inner">
+        <div className="ws-page-wrap ws-nav-inner">
           <Link className="ws-brand" to="/">
             WEBSYS
           </Link>
@@ -60,7 +60,7 @@ export default function LandingPage() {
 
       <main className="pb-4 pb-lg-0">
         <section className="ws-hero-block">
-          <div className="container-xl">
+          <div className="ws-page-wrap">
             <div className="row align-items-center g-4 g-lg-5">
               <div className="col-12 col-lg-5">
                 <span className="ws-section-kicker">Unified software systems for growing operators</span>
@@ -115,7 +115,7 @@ export default function LandingPage() {
         </section>
 
         <section id="services" className="ws-section">
-          <div className="container-xl">
+          <div className="ws-page-wrap">
             <span className="ws-section-kicker text-center d-block">What Websys delivers</span>
             <h2 className="ws-section-title ws-line-title">Services That Turn Product Vision Into Production</h2>
             <p className="ws-section-copy ws-section-copy-center">
@@ -137,7 +137,7 @@ export default function LandingPage() {
         </section>
 
         <section className="ws-section">
-          <div className="container-xl">
+          <div className="ws-page-wrap">
             <h2 className="ws-section-title ws-line-title">A Scalable Platform For Every Industry</h2>
             <div className="row g-3 mt-1">
               {industries.map((industry) => (
@@ -157,7 +157,7 @@ export default function LandingPage() {
         </section>
 
         <section id="results" className="ws-section">
-          <div className="container-xl">
+          <div className="ws-page-wrap">
             <h2 className="ws-section-title ws-line-title">Outcomes Teams Can Feel In Production</h2>
             <div className="row g-3 mt-1">
               {outcomeCards.map((card) => (
@@ -177,7 +177,7 @@ export default function LandingPage() {
         </section>
 
         <section id="platform" className="ws-section">
-          <div className="container-xl">
+          <div className="ws-page-wrap">
             <div className="row g-4 align-items-center">
               <div className="col-12 col-lg-7">
                 <div className="ws-ops-wrap">
@@ -213,7 +213,7 @@ export default function LandingPage() {
         </section>
 
         <section id="playbook" className="ws-section">
-          <div className="container-xl">
+          <div className="ws-page-wrap">
             <span className="ws-section-kicker text-center d-block">Production rollout playbook</span>
             <h2 className="ws-section-title ws-line-title">A Safer Path From Legacy To Scalable CRM</h2>
             <div className="row g-3 mt-1">
@@ -231,7 +231,7 @@ export default function LandingPage() {
         </section>
 
         <section id="access" className="ws-section">
-          <div className="container-xl">
+          <div className="ws-page-wrap">
             <div className="ws-cta-panel">
               <div>
                 <span className="ws-section-kicker">Start here</span>
@@ -261,7 +261,7 @@ export default function LandingPage() {
       </main>
 
       <footer className="ws-footer">
-        <div className="container-xl">
+        <div className="ws-page-wrap">
           <div className="row g-4 align-items-start">
             {footerColumns.map((group) => (
               <div className="col-6 col-md-3" key={group.title}>
