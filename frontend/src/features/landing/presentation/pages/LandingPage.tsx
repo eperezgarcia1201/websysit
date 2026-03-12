@@ -142,11 +142,18 @@ export default function LandingPage() {
                     alt=""
                     className="ws-hero-visual ws-hero-gradient"
                     aria-hidden="true"
+                    loading="eager"
+                  />
+                  <img
+                    src="/branding/dev-pack/floating/panel-1.png"
+                    alt=""
+                    className="ws-hero-float ws-hero-float-left"
+                    aria-hidden="true"
                   />
                   <img
                     src="/branding/dev-pack/floating/panel-2.png"
                     alt=""
-                    className="ws-hero-float"
+                    className="ws-hero-float ws-hero-float-right"
                     aria-hidden="true"
                   />
                 </div>

@@ -180,25 +180,35 @@
 
 .ws-hero-visual {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
 }
 
 .ws-hero-gradient {
-  width: 133%;
+  position: absolute;
+  inset: 0;
   max-width: none;
-  transform: translate(-13%, -16%);
-  filter: saturate(1.05);
+  object-fit: cover;
+  object-position: center 58%;
+  filter: saturate(1.08) brightness(0.96) contrast(1.04);
 }
 
 .ws-hero-float {
   position: absolute;
-  right: 7%;
-  bottom: 10%;
-  width: min(260px, 38%);
-  opacity: 0.74;
+  width: min(250px, 34%);
+  opacity: 0.8;
   border-radius: 0.65rem;
   box-shadow: 0 16px 30px rgba(2, 8, 30, 0.42);
+}
+
+.ws-hero-float-left {
+  left: 4%;
+  bottom: 9%;
+}
+
+.ws-hero-float-right {
+  right: 6%;
+  bottom: 11%;
 }
 
 .ws-section {
@@ -527,8 +537,7 @@
   }
 
   .ws-hero-gradient {
-    width: 138%;
-    transform: translate(-17%, -16%);
+    object-position: center 56%;
   }
 }
 
@@ -579,12 +588,11 @@
   }
 
   .ws-hero-gradient {
-    width: 145%;
-    transform: translate(-21%, -14%);
+    object-position: center 54%;
   }
 
   .ws-hero-float {
-    width: min(220px, 45%);
+    width: min(210px, 38%);
   }
 }
 
@@ -631,13 +639,20 @@
   }
 
   .ws-hero-gradient {
-    width: 165%;
-    transform: translate(-30%, -10%);
+    object-position: center 54%;
   }
 
   .ws-hero-float {
-    right: 5%;
-    bottom: 7%;
-    width: min(180px, 48%);
+    width: min(160px, 44%);
+  }
+
+  .ws-hero-float-left {
+    left: 3%;
+    bottom: 8%;
+  }
+
+  .ws-hero-float-right {
+    right: 4%;
+    bottom: 8%;
   }
 }
