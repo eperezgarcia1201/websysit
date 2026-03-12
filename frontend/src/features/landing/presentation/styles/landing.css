@@ -180,15 +180,17 @@
 
 .ws-hero-visual {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
 }
 
 .ws-hero-gradient {
-  position: relative;
-  max-width: 100%;
-  transform: translateX(18px);
-  filter: drop-shadow(0 22px 35px rgba(1, 7, 27, 0.55));
+  position: absolute;
+  inset: 0;
+  max-width: none;
+  object-fit: cover;
+  object-position: 72% 12%;
+  filter: saturate(1.04) contrast(1.03);
 }
 
 .ws-hero-float {
@@ -535,7 +537,7 @@
   }
 
   .ws-hero-gradient {
-    transform: translateX(8px);
+    object-position: 72% 10%;
   }
 }
 
@@ -586,7 +588,7 @@
   }
 
   .ws-hero-gradient {
-    transform: none;
+    object-position: 70% 10%;
   }
 
   .ws-hero-float {
@@ -637,7 +639,7 @@
   }
 
   .ws-hero-gradient {
-    transform: none;
+    object-position: 68% 10%;
   }
 
   .ws-hero-float {

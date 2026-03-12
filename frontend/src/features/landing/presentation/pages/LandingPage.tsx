@@ -138,7 +138,7 @@ export default function LandingPage() {
               <div className="col-12 col-lg-7">
                 <div className="ws-hero-visual-wrap">
                   <img
-                    src="/branding/landing-hero.svg"
+                    src="/branding/full_background.png"
                     alt=""
                     className="ws-hero-visual ws-hero-gradient"
                     aria-hidden="true"
