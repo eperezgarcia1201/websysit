@@ -502,15 +502,15 @@ body {
 
 .terminal-menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  grid-auto-rows: 72px;
+  grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+  grid-auto-rows: 84px;
   align-content: start;
-  gap: 8px;
+  gap: 10px;
 }
 
 .terminal-menu-item {
-  min-height: 72px;
-  border-radius: 10px;
+  min-height: 84px;
+  border-radius: 12px;
   border: 1px solid rgba(0, 0, 0, 0.25);
   background: linear-gradient(
       180deg,
@@ -519,7 +519,7 @@ body {
     ),
     var(--item-color, #2b3344);
   color: #0b0f15;
-  padding: 8px 8px;
+  padding: 10px 10px 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -527,19 +527,42 @@ body {
   cursor: pointer;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 4px 10px rgba(0, 0, 0, 0.35);
   transition: transform 0.08s ease, box-shadow 0.08s ease;
+  touch-action: manipulation;
 }
 
 .terminal-price {
   color: rgba(0, 0, 0, 0.75);
   font-weight: 700;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .terminal-menu-item span:first-child {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.3px;
-  font-size: 12px;
+  font-size: 13px;
+  line-height: 1.15;
+}
+
+@media (pointer: coarse) {
+  .terminal-menu-grid {
+    grid-template-columns: repeat(auto-fill, minmax(144px, 1fr));
+    grid-auto-rows: 96px;
+    gap: 12px;
+  }
+
+  .terminal-menu-item {
+    min-height: 96px;
+    padding: 12px;
+  }
+
+  .terminal-price {
+    font-size: 15px;
+  }
+
+  .terminal-menu-item span:first-child {
+    font-size: 14px;
+  }
 }
 
 .terminal-ticket-list {
