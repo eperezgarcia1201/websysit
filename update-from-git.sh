@@ -14,9 +14,9 @@ docker-compose.platform.yml
 README.md
 SPARSE
 
-git fetch origin master
-git checkout master
-git pull --ff-only origin master
+git fetch origin main
+git checkout main
+git pull --ff-only origin main
 
 if [ ! -f .env ]; then
   cp .env.platform.example .env
